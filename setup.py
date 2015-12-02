@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 import python_field
 
@@ -20,6 +20,10 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Environment :: Web Environment',
     ],
+    #package_data={
+    #    'python_field': ['*'],     # All files from folder A
+    #},
+    include_package_data=True,
     zip_safe = False,
     install_requires = ['Django>=1.4'],
 )
